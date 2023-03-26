@@ -1,0 +1,42 @@
+* {
+    font-family: 'roloto', sans-serif;
+}
+
+body {
+    margin: unset;
+}
+
+.main-container {
+    width: 100%;
+    max-width: 767.98px;
+}
+
+header {
+    position: relative;
+    padding: 4%;
+}
+
+header img{
+    display: flex;
+    width: 40%;
+
+}
+
+.retour-accueil a {
+    color: black;
+}
+
+.retour-accueil i {
+    font-size: x-large;
+}
+
+.logo img{
+    position: absolute;
+    top: 30%;
+    right: 30%;
+}
+
+
+
+
+
