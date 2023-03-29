@@ -24,7 +24,9 @@ h2{
 .header_logo {
     display: flex;
     justify-content: center;
+
     padding: 14px;
+
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
 }
 
@@ -118,7 +120,18 @@ nav{
 
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
 
-    background: linear-gradient(to left, #9356DC, #FF79DA)
+    background: linear-gradient(to left, #9356DC, #FF79DA);
+
+    transform: scale(1);
+    transition-property: transform;
+    transition-duration: 0.5s;
+}
+
+.button:hover{
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
+    opacity: 0,9;
+
+    transform: scale(1.15);
 }
 
 .exploreButton:hover {
@@ -168,6 +181,13 @@ nav{
     background-color: #F7F7F7;
 
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.functioningArticle:hover{
+    background-color: #F5EDFF;
+    border-color: #F5EDFF;
+    
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
 }
 
 .functioningArticle i{
@@ -237,7 +257,10 @@ nav{
     background-color: white;
     border-radius: 20px;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
 
+.card:hover{
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .card a{
@@ -284,7 +307,6 @@ nav{
     color: black;
 
     padding: 15px 0px 0px 10px;
-    
 }
 
 .card-title{
@@ -306,9 +328,11 @@ nav{
 }
 
 .card-like:active{
+    --fa-style: solid;
     border-color: transparent;
     color: linear-gradient(to left, #9356DC, #FF79DA)
 }
+
 
 /*footer*/
 
@@ -343,7 +367,6 @@ footer i{
 
 footer ul i{
     padding-right: 10px;
-    
 }
 
 footer li{
@@ -354,12 +377,160 @@ footer li{
     font-size: 15px;
 }
 
-/* Large devices (desktop, less than 768px) */
-@media (min-width: 1224px) {
+footer a{
+    color: #FFFF;
+    text-decoration: unset;
+}
+
+/* Medium devices (tablets, less/equal than 1024px) */
+
+@media (max-width: 1024px) and (min-width: 767px) {
 
 
 /*navigation*/
 
+html h1{
+    font-size: 22px;
+}
+
+html h2, p, li{
+    font-size: 14px;
+}
+
+.navigation h1{
+    font-size: 32px;
+}
+
+.navigation h1, .navigation p{
+    display: block;
+	text-align: center;
+
+    margin: unset;
+}
+
+.navigation h1{
+    margin-top: 4%;
+    margin-bottom: 3%;
+}
+
+.exploreButton{  
+
+    margin-bottom: 5%;
+    margin-top: 4%;
+}
+
+
+/*fonctionnement*/
+
+.functioning{
+    padding-top: 2%;
+    margin-bottom: 6%;
+}
+
+.functioning h1{
+    margin-left: 10%;
+}
+
+.functioningContent{
+    flex-direction: initial;
+    justify-content: center;
+
+    margin: 0% 2% 0% 2%;
+    
+    gap: 25px;
+}
+
+.functioningArticle{
+    width: 230px;
+    padding-right: unset;
+
+    gap: 3%;
+}
+
+
+/*restaurants*/
+
+.restaurants{
+    padding-top: 2%;
+    padding-bottom: 6%;
+
+    background-color: #F7F7F7;
+}
+
+.restaurants h1{
+    margin-left: 5%;
+}
+
+.restaurants-content{
+    flex-direction: initial;
+    align-items: center;
+    gap: 20px;
+
+    
+}
+
+.new{
+    position: absolute;
+    right: 20px;
+}
+
+.card{
+    width: 390px;
+}
+
+
+/*footer*/
+
+footer{
+    display: flex;
+    flex-direction: row-reverse;
+
+    padding: 30px 40px 25px;
+    gap: 50px;
+ }
+ 
+ .footer-logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+
+ .footer-logo img{
+    margin: unset;
+
+    width: 84px;
+    height: 15px;
+}
+    
+ 
+ footer ul{
+    display: flex;
+    flex-direction: initial;
+    gap: 20px;
+ 
+    padding-left: 30px;
+ }
+ 
+ footer i{
+     width: 20px;
+ }
+ 
+ footer ul i{
+     padding-right: 10px;
+ }
+ 
+ footer li{
+     font-size: 12px;
+ }
+}
+
+
+
+/* Large devices (desktop) */
+@media (min-width: 1025px) {
+
+
+/*navigation*/
 
 .navigation{
     gap: unset;
@@ -367,10 +538,6 @@ footer li{
 
 .navigation h1{
     font-size: 36px;
-}
-
-.navigation h1, .navigation p, br{ 
-    display: unset;
 }
 
 .navigation h1, .navigation p{
@@ -407,14 +574,13 @@ footer li{
     flex-direction: initial;
     justify-content: center;
 
-    margin-left: 2%;
+    margin: 0% 2% 0% 2%;
     
     gap: 35px;
 }
 
 .functioningArticle{
-    width: 25%;
-
+    width: 370px;
 }
 
 
@@ -440,6 +606,10 @@ footer li{
 .new{
     position: absolute;
     right: 20px;
+}
+
+.card{
+    width: 390px;
 }
 
 
