@@ -465,8 +465,11 @@ html h2, p, li{
 
 .restaurants-content{
     display: grid;
+    grid-template-columns: 350px;
+    grid-template-rows: 300px;
     flex-direction: initial;
     align-items: center;
+    justify-content: center;
     gap: 20px;
 }
 
@@ -496,7 +499,7 @@ html h2, p, li{
 }
 
 .card{
-    width: 390px;
+    width: 300px;
 }
 
 
