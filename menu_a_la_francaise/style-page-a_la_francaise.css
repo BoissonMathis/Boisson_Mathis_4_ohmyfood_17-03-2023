@@ -19,6 +19,70 @@ body {
     font-size: x-large;
 }
 
+.loader{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+
+    width: 100%;
+    height: 2000px;
+    padding-top: 20%;
+
+    font-family: 'Shrikhand';
+    background-color: black;
+
+    z-index: 1;
+
+    animation: loaderdown 0.1s forwards;
+    animation-delay: 3s;
+}
+
+@keyframes loaderdown{
+    100%{
+        width: 0px;
+        height: 0px;
+        font-size: 0px;
+        overflow: hidden;
+    }
+}
+
+.loader p{
+    color: white;
+    font-size: 30px;
+    display: flex;
+}
+
+.oh {
+    /* top: 40px;
+    left: 120px; */
+    animation: loader infinite 0.3s alternate;
+}
+
+.my {
+    /* top: 40px;
+    left: 165px; */
+    animation: loader infinite 0.3s alternate;
+    animation-delay: 0.05s;
+}
+
+.food {
+    /* top: 40px;
+    left: 220px; */
+    animation: loader infinite 0.3s alternate;
+    animation-delay: 0.1s;
+}
+
+@keyframes loader {
+    
+    from {
+        transform: translateY(0px);
+    }
+
+    to {
+        transform: translateY(-30px);
+    }
+}
+
 
 /****** header ******/
 
@@ -34,8 +98,8 @@ header{
     top: 18px;
 }
 
-.retour-accueil:hover{
-    text-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+.retour-accueil i:hover{
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
 }
 
 .retour-accueil i{
@@ -85,7 +149,7 @@ header{
 }
 
 .menu h2{
-    width: 45px;
+    width: 40px;
     margin-bottom: 20px;
 
     font-size: 16px;
@@ -118,13 +182,24 @@ header{
 }
 
 .menu-like{
+    cursor: pointer;
+    position: relative;
     font-size: 24px;
+}
+
+.like-on:hover{
+    font-weight: 900;
+    background-image: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+    -webkit-background-clip: text;
+    color: transparent;
+    transition-property: color;
 }
 
 
 /* Entrées/plat/dessert*/
 
 .card-plate{
+    position: relative;
     width: 95%;
 
     background-color: white;
@@ -133,6 +208,57 @@ header{
 
     border-radius: 15px;
 
+    overflow: hidden;
+}
+
+.check{
+    position: absolute;
+    right: 0px;
+    top: 27px;
+
+    font-size: 24px;
+    color: white;
+    
+    transform: translateX(0px);
+    transition-property: transform;
+    transition-duration: 0.5s;
+}
+
+.card-plate:hover .check{
+    display: flex;
+    z-index: 1;
+    transform: translateX(-27px);
+}
+
+.card-plate::after{
+    content: '';
+    position: absolute;
+    right: -80px;
+    top: 0px;
+    
+
+    height: 100%;
+    width: 80px;
+
+    border-radius: 0px 15px 15px 0px;
+    background-color: #99E2D0;
+
+    transform: translateX(0%);
+    transition-property: transform;
+    transition-duration: 0.5s;
+}
+
+.card-plate:hover{
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.card-plate:hover::after{
+    transform: translateX(-80px);
+}
+
+.card-plate:hover .price{
+    transform: translateX(-70px);
+    z-index: 2;
 }
 
 .card-plate p,h3{
@@ -160,11 +286,15 @@ header{
 }
 
 .price{
-   display: flex; 
+    display: flex;
 
-   padding: 3.5% 6% 0% 0%;
+    padding: 3.5% 6% 0% 0%;
 
-   font-weight: bold;
+    font-weight: bold;
+
+    transform: translateX(0%);
+    transition-property: transform;
+    transition-duration: 0.5s;
 }
 
 .price p{
@@ -174,6 +304,8 @@ header{
    white-space: unset;
 
    width: 20%;
+
+   transition: .7s;
 }
 
 .entrees, .plats, .desserts{
@@ -210,7 +342,18 @@ header{
 
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
 
-    background: linear-gradient(to left, #9356DC, #FF79DA)
+    background: linear-gradient(to left, #9356DC, #FF79DA);
+
+    transform: scale(1);
+    transition-property: transform;
+    transition-duration: 0.5s;
+}
+
+.button:hover{
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
+    opacity: 0.9;
+
+    transform: scale(1.15);
 }
 
 
@@ -258,7 +401,8 @@ footer{
  }
 
 
- /* Medium devices (tablets, less/equal than 1024px) */
+
+/* Medium devices (tablets, less/equal than 1024px) */
 
 @media (max-width: 1024px) and (min-width: 767px) {
 
@@ -292,6 +436,10 @@ footer{
         margin-bottom: 40px;
     }
 
+    .card-plate:hover .price{
+        transform: translateX(-100px);
+    }
+    
     .card-plate h3{
         padding: 10px 0px 0px 10px;
     }
@@ -373,7 +521,7 @@ footer{
 
 
 
- /* Large devices (desktop) */
+/* Large devices (desktop) */
 @media (min-width: 1025px) {
 
     .menu-overview{
@@ -398,13 +546,16 @@ footer{
     }
 
     .menu-title h1{
-        width: 290px;
+        width: 220px;
     }
 
-
-    .entrees, .plats, .desserts{
+    .entrees,.plats,.desserts{
         margin-bottom: 40px;
     }
+
+    .card-plate:hover .price{
+        transform: translateX(-50px); 
+    }   
 
     .card-plate h3{
         padding: 10px 0px 0px 10px;

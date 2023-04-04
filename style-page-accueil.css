@@ -1,7 +1,6 @@
-
-/* général */
-* {
-    font-family: 'roloto', sans-serif;
+html{
+    font-family: 'roboto', sans-serif;
+    font-weight: 300;
 }
 
 body {
@@ -14,6 +13,71 @@ body {
 
 h2{
     font-size: 16px;
+}
+
+.loader{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+
+    width: 100%;
+    height: 2000px;
+    padding-top: 20%;
+
+    font-family: 'Shrikhand';
+    background-color: black;
+
+    z-index: 1;
+
+    animation: loaderdown 0.1s forwards;
+    animation-delay: 3s;
+}
+
+@keyframes loaderdown{
+    100%{
+        width: 0px;
+        height: 0px;
+        font-size: 0px;
+        overflow: hidden;
+    }
+}
+
+.loader p{
+    color: white;
+    font-size: 30px;
+    display: flex;
+}
+
+.oh {
+    /* top: 40px;
+    left: 120px; */
+    animation: loader infinite 0.3s alternate;
+}
+
+.my {
+    /* top: 40px;
+    left: 165px; */
+    animation: loader infinite 0.3s alternate;
+    animation-delay: 0.05s;
+}
+
+.food {
+    /* top: 40px;
+    left: 220px; */
+    animation: loader infinite 0.3s alternate;
+    animation-delay: 0.1s;
+}
+
+
+@keyframes loader {
+    
+    from {
+        transform: translateY(0px);
+    }
+
+    to {
+        transform: translateY(-30px);
+    }
 }
 
 
@@ -129,14 +193,13 @@ nav{
 
 .button:hover{
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
-    opacity: 0,9;
-
     transform: scale(1.15);
 }
 
 .exploreButton:hover {
 	font-weight: 500;
 	border-width: 2px;
+    opacity: 0.9;
 }
 
 
@@ -325,14 +388,22 @@ nav{
     margin-right: 20px;
 
     font-size: 24px;
+    color: black;
 }
 
-.card-like:active{
-    --fa-style: solid;
-    border-color: transparent;
-    color: linear-gradient(to left, #9356DC, #FF79DA)
+.menu-like{
+    cursor: pointer;
+    position: relative;
+    font-size: 24px;
 }
 
+.like-on:hover{
+    font-weight: 900;
+    background-image: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+    -webkit-background-clip: text;
+    color: transparent;
+    transition-property: color;
+}
 
 /*footer*/
 
@@ -625,9 +696,10 @@ footer{
     grid-template-rows: max-content;
     grid-template-columns: max-content;
     flex-direction: initial;
+    justify-content: center;
     
 
-    margin-left: 10%;
+    margin-left: 6%;
     gap: 70px;
 }
 
@@ -706,4 +778,5 @@ footer{
  
      font-size: 15px;
  }
+
 }
