@@ -1,6 +1,11 @@
+<<<<<<< HEAD
 html{
     font-family: 'roboto', sans-serif;
     font-weight: 300;
+=======
+* {
+    font-family: 'roloto', sans-serif;
+>>>>>>> b27d3d79b2bc2f713bb8d4af2d2e000db824029b
 }
 
 body {
@@ -9,6 +14,21 @@ body {
 
 .main-container {
     width: 100%;
+<<<<<<< HEAD
+=======
+    max-width: 767.98px;
+}
+
+header {
+    position: relative;
+    padding: 4%;
+}
+
+header img{
+    display: flex;
+    width: 40%;
+
+>>>>>>> b27d3d79b2bc2f713bb8d4af2d2e000db824029b
 }
 
 .retour-accueil a {
@@ -19,6 +39,7 @@ body {
     font-size: x-large;
 }
 
+<<<<<<< HEAD
 .loader{
     position: absolute;
     display: flex;
@@ -117,6 +138,12 @@ header{
 .header_logo img{
     width: 128px;
     height: 22px;
+=======
+.logo img{
+    position: absolute;
+    top: 30%;
+    right: 30%;
+>>>>>>> b27d3d79b2bc2f713bb8d4af2d2e000db824029b
 }
 
 
@@ -124,34 +151,57 @@ header{
 
 .menu-overview{
     width: 100%;
+<<<<<<< HEAD
     height: 200px;
+=======
+    height: 240px;
+>>>>>>> b27d3d79b2bc2f713bb8d4af2d2e000db824029b
 }
 
 .menu-overview img{
     width: 100%;
     height: 280px;
+<<<<<<< HEAD
 
     object-fit: cover;
+=======
+>>>>>>> b27d3d79b2bc2f713bb8d4af2d2e000db824029b
 }
 
 
 /*menu*/
 
 .menu{
+<<<<<<< HEAD
     display: inline-flex;
     flex-direction: column;
     order: -1;
     box-sizing: border-box;
 
+=======
+    display: flex;
+    flex-direction: column;
+    
+>>>>>>> b27d3d79b2bc2f713bb8d4af2d2e000db824029b
     width: 100%;
     padding: 0% 3% 0% 3%;
     
     background-color: #F7F7F7;
+<<<<<<< HEAD
 }
 
 .menu h2{
     width: 40px;
     margin-bottom: 20px;
+=======
+
+    border-radius: 20% 20% 0% 0%;
+}
+
+.menu h2{
+    width: 45px;
+    margin-bottom: unset;
+>>>>>>> b27d3d79b2bc2f713bb8d4af2d2e000db824029b
 
     font-size: 16px;
     font-weight: 200;
@@ -163,6 +213,7 @@ header{
 .menu-title{
     display: flex;
     align-items: center;
+<<<<<<< HEAD
     position: relative;
 
     margin-top: 5%;
@@ -170,12 +221,18 @@ header{
 
     border-radius: 40px 40px 0px 0px;
     background-color: #F7F7F7;
+=======
+
+    margin-top: 5%;
+    padding-left: 2%;
+>>>>>>> b27d3d79b2bc2f713bb8d4af2d2e000db824029b
 }
 
 .menu-title h1{
     width: 80%;
 
     font-size: 28px;
+<<<<<<< HEAD
 
     font-family: 'Shrikhand';
     font-style: italic;
@@ -196,11 +253,22 @@ header{
     transition-property: color;
 }
 
+=======
+}
+
+.menu-like{
+    font-size: 24px;
+}
+
+>>>>>>> b27d3d79b2bc2f713bb8d4af2d2e000db824029b
 
 /* Entrées/plat/dessert*/
 
 .card-plate{
+<<<<<<< HEAD
     position: relative;
+=======
+>>>>>>> b27d3d79b2bc2f713bb8d4af2d2e000db824029b
     width: 95%;
 
     background-color: white;
@@ -209,6 +277,7 @@ header{
 
     border-radius: 15px;
 
+<<<<<<< HEAD
     overflow: hidden;
 }
 
@@ -260,19 +329,26 @@ header{
 .card-plate:hover .price{
     transform: translateX(-70px);
     z-index: 2;
+=======
+>>>>>>> b27d3d79b2bc2f713bb8d4af2d2e000db824029b
 }
 
 .card-plate p,h3{
     margin: unset;
     padding: 4% 0% 0% 3%;
 
+<<<<<<< HEAD
     height: 20px;
+=======
+    height: 15px;
+>>>>>>> b27d3d79b2bc2f713bb8d4af2d2e000db824029b
 }
 
 .card-plate-content{
     display: flex;
     justify-content: space-between;
 
+<<<<<<< HEAD
     width: 100%;
 
     padding-bottom: 4%;   
@@ -307,12 +383,26 @@ header{
    width: 20%;
 
    transition: .7s;
+=======
+    padding-bottom: 4%;   
+}
+
+.price{
+   display: flex; 
+
+   padding: 3.5% 6% 0% 0%;
+
+   font-weight: bold;
+>>>>>>> b27d3d79b2bc2f713bb8d4af2d2e000db824029b
 }
 
 .entrees, .plats, .desserts{
     display: flex;
     flex-direction: column;
+<<<<<<< HEAD
     align-items: center;
+=======
+>>>>>>> b27d3d79b2bc2f713bb8d4af2d2e000db824029b
 
     gap: 20px;
     margin-bottom: 8%;
@@ -322,8 +412,14 @@ header{
     display: flex;
 	justify-content: center;
 
+<<<<<<< HEAD
     margin-bottom: 12%;
     margin-top: 5%;
+=======
+    margin-bottom: 15%;
+    margin-top: 10%;
+
+>>>>>>> b27d3d79b2bc2f713bb8d4af2d2e000db824029b
 }
 
 .button{
@@ -331,7 +427,11 @@ header{
     justify-content: center;
     width: 40%;
 
+<<<<<<< HEAD
     padding: 15px;
+=======
+    padding: 4%;
+>>>>>>> b27d3d79b2bc2f713bb8d4af2d2e000db824029b
 
     border-style: solid;
 	border-width: 1px;
@@ -343,6 +443,7 @@ header{
 
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
 
+<<<<<<< HEAD
     background: linear-gradient(to left, #9356DC, #FF79DA);
 
     transform: scale(1);
@@ -355,6 +456,9 @@ header{
     opacity: 0.9;
 
     transform: scale(1.15);
+=======
+    background: linear-gradient(to left, #9356DC, #FF79DA)
+>>>>>>> b27d3d79b2bc2f713bb8d4af2d2e000db824029b
 }
 
 
@@ -399,6 +503,7 @@ footer{
      display: flex;
  
      font-size: 15px;
+<<<<<<< HEAD
  }
 
 
@@ -633,3 +738,6 @@ footer{
         font-size: 15px;
     }
 }
+=======
+ }
+>>>>>>> b27d3d79b2bc2f713bb8d4af2d2e000db824029b
