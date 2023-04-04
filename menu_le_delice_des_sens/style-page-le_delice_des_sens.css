@@ -1,11 +1,6 @@
-<<<<<<< HEAD
 html{
     font-family: 'roboto', sans-serif;
     font-weight: 300;
-=======
-* {
-    font-family: 'roloto', sans-serif;
->>>>>>> b27d3d79b2bc2f713bb8d4af2d2e000db824029b
 }
 
 body {
@@ -14,21 +9,6 @@ body {
 
 .main-container {
     width: 100%;
-<<<<<<< HEAD
-=======
-    max-width: 767.98px;
-}
-
-header {
-    position: relative;
-    padding: 4%;
-}
-
-header img{
-    display: flex;
-    width: 40%;
-
->>>>>>> b27d3d79b2bc2f713bb8d4af2d2e000db824029b
 }
 
 .retour-accueil a {
@@ -39,7 +19,6 @@ header img{
     font-size: x-large;
 }
 
-<<<<<<< HEAD
 .loader{
     position: absolute;
     display: flex;
@@ -653,10 +632,3 @@ footer{
         font-size: 15px;
     }
 }
-=======
-.logo img{
-    position: absolute;
-    top: 30%;
-    right: 30%;
-}
->>>>>>> b27d3d79b2bc2f713bb8d4af2d2e000db824029b
