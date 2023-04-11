@@ -29,12 +29,12 @@ body {
     padding-top: 20%;
 
     font-family: 'Shrikhand';
-    background-color: black;
+    background-color: #F7F7F7;
 
     z-index: 1;
 
     animation: loaderdown 0.1s forwards;
-    animation-delay: 3s;
+    animation-delay: 1s;
 }
 
 @keyframes loaderdown{
@@ -47,7 +47,7 @@ body {
 }
 
 .loader p{
-    color: white;
+    color: black;
     font-size: 30px;
     display: flex;
 }
@@ -71,6 +71,7 @@ body {
     animation: loader infinite 0.3s alternate;
     animation-delay: 0.1s;
 }
+
 
 @keyframes loader {
     
@@ -156,6 +157,8 @@ header{
     font-weight: 200;
 
     border-bottom: 3px solid #99E2D0;
+
+    opacity: 0;
     
 }
 
@@ -197,6 +200,30 @@ header{
 
 
 /* Entrées/plat/dessert*/
+
+.menu-un{
+    animation: plats 1.2s forwards;
+    animation-delay: 1.3s;
+}
+
+.menu-deux{
+    animation: plats 1.2s forwards;
+    animation-delay: 2s;
+}
+
+.menu-trois{
+    animation: plats 1.2s forwards;
+    animation-delay: 2.7s;
+}
+
+@keyframes plats{
+    from {
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
 
 .card-plate{
     position: relative;
@@ -261,11 +288,27 @@ header{
     z-index: 2;
 }
 
+.card-plate:hover .card-plate-title {
+    width: 200px;
+
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
 .card-plate p,h3{
     margin: unset;
     padding: 4% 0% 0% 3%;
+    width: 100%;
+    transition: width 0.5s;
 
-    height: 20px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.card-plate p{
+    padding-top: 3%;
 }
 
 .card-plate-content{
@@ -312,6 +355,7 @@ header{
     display: flex;
     flex-direction: column;
     align-items: center;
+    opacity: 0;
 
     gap: 20px;
     margin-bottom: 8%;
@@ -374,32 +418,35 @@ footer{
  }
  
  footer ul{
-     list-style-type: none;
+    list-style-type: none;
  
-     display: flex;
-     flex-direction: column;
-     gap: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
  
-     padding-left: 30px;
+    padding-left: 30px;
  }
  
  footer i{
-     width: 20px;
+    width: 20px;
  }
  
  footer ul i{
-     padding-right: 10px;
-     
+    padding-right: 10px;
  }
  
  footer li{
-     color: white;
+    color: white;
  
-     display: flex;
+    display: flex;
  
-     font-size: 15px;
+    font-size: 15px;
  }
 
+ footer a{
+    color: white;
+    text-decoration: none;
+ }
 
 
 /* Medium devices (tablets, less/equal than 1024px) */
@@ -438,6 +485,14 @@ footer{
 
     .card-plate:hover .price{
         transform: translateX(-100px);
+    }
+
+    .card-plate:hover .card-plate-title {
+        width: unset;
+    
+        text-overflow: unset;
+        overflow: unset;
+        white-space: unset;
     }
     
     .card-plate h3{
@@ -497,7 +552,7 @@ footer{
         top: 0px;
         left: 10px;
 
-        gap: 20px;
+        gap: 17px;
     
         padding-left: 30px;
     }
@@ -556,6 +611,14 @@ footer{
     .card-plate:hover .price{
         transform: translateX(-50px); 
     }   
+
+    .card-plate:hover .card-plate-title {
+        width: unset;
+    
+        text-overflow: unset;
+        overflow: unset;
+        white-space: unset;
+    }
 
     .card-plate h3{
         padding: 10px 0px 0px 10px;

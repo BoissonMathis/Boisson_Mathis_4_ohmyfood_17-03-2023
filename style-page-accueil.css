@@ -21,16 +21,16 @@ h2{
     justify-content: center;
 
     width: 100%;
-    height: 2000px;
+    height: 2210px;
     padding-top: 20%;
 
     font-family: 'Shrikhand';
-    background-color: black;
+    background-color: #F7F7F7;
 
     z-index: 1;
 
     animation: loaderdown 0.1s forwards;
-    animation-delay: 3s;
+    animation-delay: 1s;
 }
 
 @keyframes loaderdown{
@@ -43,7 +43,7 @@ h2{
 }
 
 .loader p{
-    color: white;
+    color: black;
     font-size: 30px;
     display: flex;
 }
@@ -391,6 +391,11 @@ nav{
     color: black;
 }
 
+.card-like-container:active{
+    pointer-events: none;
+}                         
+
+
 .menu-like{
     cursor: pointer;
     position: relative;
@@ -408,7 +413,7 @@ nav{
 /*footer*/
 
 footer{
-   background-color: #353535; 
+   background-color: #353535;
 
    padding-bottom: 5%;
 }
@@ -615,7 +620,7 @@ footer{
  }
  
  footer li{
-     font-size: 12px;
+     font-size: 15px;
  }
 }
 
